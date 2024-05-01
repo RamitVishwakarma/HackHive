@@ -7,11 +7,10 @@ from sites.devfolio.devfolio import scrapeDevfolio
 
 def scrape_and_save():
     devfolio_hackathons = scrapeDevfolio()
-    
     devpost_hackathons = scrapeDevpost()
     
     all_hackathons = devfolio_hackathons + devpost_hackathons
-    
+    Hackathon.clear_database()
     for hackathon_data in all_hackathons:
         hackathon = Hackathon(**hackathon_data)
         hackathon.save_to_db()
@@ -26,8 +25,9 @@ def job():
         print("Error in scraping and saving data")
         job()
     
-schedule.every().hour.do(job)
+# schedule.every().hour.do(job)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+    # schedule.run_pending()
+    # time.sleep(1)
+scrape_and_save()

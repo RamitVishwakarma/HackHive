@@ -16,8 +16,8 @@ class Hackathon:
         self.source = source
 
     def save_to_db(self):
-        db_name = "hackathons"
-        col_name = "hackathon_data"
+        db_name = "HackHive"
+        col_name = "hackathon"
         db = client[db_name]
         col = db[col_name]
         col.insert_one(self.to_dict())
@@ -37,3 +37,11 @@ class Hackathon:
             "source": self.source,
             "created_at": datetime.now()
         }
+
+    @staticmethod
+    def clear_database():
+        db_name = "HackHive"
+        col_name = "hackathon"
+        db = client[db_name]
+        col = db[col_name]
+        col.delete_many({})

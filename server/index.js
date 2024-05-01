@@ -5,10 +5,7 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const client = new MongoClient(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const client = new MongoClient(process.env.MONGODB_URI);
 
 async function connectToMongo() {
   try {
@@ -19,6 +16,10 @@ async function connectToMongo() {
   }
 }
 connectToMongo();
+
+app.get("/", (req, res) => {
+  res.send("Yupp server is running!🎉");
+});
 
 app.get("/hackathons", async (req, res) => {
   try {

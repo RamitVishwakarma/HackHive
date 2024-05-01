@@ -25,9 +25,8 @@ def job():
         print("Error in scraping and saving data")
         job()
     
-# schedule.every().hour.do(job)
+schedule.every().hour.do(job)
 
-# while True:
-    # schedule.run_pending()
-    # time.sleep(1)
-scrape_and_save()
+while True:
+    schedule.run_pending()
+    time.sleep(1)

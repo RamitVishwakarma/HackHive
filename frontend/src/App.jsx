@@ -5,6 +5,7 @@ import Hero from "./HeroSection/Hero";
 import Organizations from "./Organizations/Organizations";
 import Search from "./Serarch Bar/Search";
 import HackathonCard from "./HackathonCard/HackathonCard";
+import Login from "./Pages/Login";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,11 +30,12 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <Organizations />
       <Search />
-      <HackathonCard />
+      <HackathonCard /> */}
+      <Login />
     </>
   );
 }

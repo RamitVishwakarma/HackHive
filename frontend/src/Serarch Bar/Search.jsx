@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function Search() {
+  return (
+    <div className="search">
+        <input type="text" id='search-bar' placeholder='Search for Hackathons' />
+        <button>Search</button>
+    </div>
+  )
+}

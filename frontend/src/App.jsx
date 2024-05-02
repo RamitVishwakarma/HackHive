@@ -1,13 +1,13 @@
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react'
-import Navbar from './Navbar/Navbar'
-import Hero from './HeroSection/Hero';
-import Organizations from './Organizations/Organizations';
-import Search from './Serarch Bar/Search';
-
+import { useState } from "react";
+import Navbar from "./Navbar/Navbar";
+import Hero from "./HeroSection/Hero";
+import Organizations from "./Organizations/Organizations";
+import Search from "./Serarch Bar/Search";
+import HackathonCard from "./HackathonCard/HackathonCard";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,13 +29,13 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-      <Navbar/>
-      <Hero/>
-      <Organizations/>
-      <Search/>
-
+      <Navbar />
+      <Hero />
+      <Organizations />
+      <Search />
+      <HackathonCard />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const client = new MongoClient(process.env.MONGODB_URI);
+const cors = require("cors");
 
 async function connectToMongo() {
   try {
@@ -17,6 +18,7 @@ async function connectToMongo() {
 }
 connectToMongo();
 
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Yupp server is running!🎉");
 });

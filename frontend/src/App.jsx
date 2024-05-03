@@ -5,6 +5,8 @@ import Search from "./Serarch Bar/Search";
 import HackathonCard from "./HackathonCard/HackathonCard";
 import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./Footer/Footer";
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
             path="/"
             element={
               <div>
-                <Navbar /> <Hero /> <Organizations /> <Search />
+                <Navbar /> <Hero /> <Organizations /> <Search /> <Footer/>
               </div>
             }
           />

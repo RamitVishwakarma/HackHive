@@ -1,12 +1,13 @@
 import React from "react";
 import "./Navbar.css";
+import logo from "../assets/logo.svg";
 
 export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo">
         <a href="">
-          <img src="" alt="" />
+          <img src= {logo} alt="" />
         </a>
       </div>
       <div className="navbar-options">

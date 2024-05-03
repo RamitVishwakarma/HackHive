@@ -25,8 +25,11 @@
 }
 
 .hero-img {
-    border: 1px solid black;
-    height: 20vw;
-    width: 35vw;
+    /* height: 20vw;
+    width: 35vw; */
     margin: auto 0;
+}
+.hero-img img{
+    height: 20vw;
+    width: 30vw;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import image13 from "../assets/image13.png"
 
 
 export default function Hero() {
@@ -10,7 +11,7 @@ export default function Hero() {
             <h1><span>Empower Builders</span> with <span>Hackathons</span>.</h1>
         </div>
         <div className="hero-img">
-            <img src="" alt="" />
+            <img src={image13} alt="" />
         </div>
     </div>
   )

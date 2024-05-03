@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import placeholderImage from "../assets/logo.svg";
+import placeholderImage from "../../assets/logo.svg";
 
 export default function HackathonCard() {
   const [hackathons, setHackathons] = useState([]);
@@ -50,7 +50,6 @@ export default function HackathonCard() {
             </p>
             {/* Themes */}
             <div className="flex py-2 gap-1">
-              <span className="text-blue-500 py-1">Themes :</span>
               {hackathon.themes.map((theme, key) => (
                 <span
                   key={key}
